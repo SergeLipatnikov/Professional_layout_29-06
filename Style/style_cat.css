@@ -110,43 +110,147 @@ li {
     padding-right: 33px;
 }
 
-.top__content {
-    background: #F1E4E6;
-    height: 764px;
-    margin-bottom: 65px;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 60px 10px 60px 10px;
 }
 
-.content {
+.label__nav {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F16D7F;
+}
+
+.name__history {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-    background: url('img/man.png');
-    background-repeat: no-repeat;
-    background-position: -216px bottom;
+}
+
+.text__history {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+}
+
+.text__history__eff {
+    margin: 0 10px;
+}
+
+.text__history:hover {
+    font-weight: 700;
+    color: #F16D7F;
+}
+
+.filters {
+    display: flex;
+    margin: auto;
+    margin: 50px auto 65px auto;
+}
+
+.filter__right {
+    display: flex;
+    justify-content: space-between;
     margin: auto;
 }
 
-.content__text {
-    border-left: 12px solid #F16D7F;
-    margin-right: 100px;
+.filter__left__box {
+    cursor: pointer;
+    position: absolute;
 }
 
-.cont__txt {
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 58px;
-    color: #222222;
-    padding: 0 0 0 16px;
+details [open] > summary {
+    color:#EF5B70;
 }
 
-.eff {
-    font-size: 32px;
+.filter__left__box__list {
+    width: 360px;
+    box-shadow: 6px 4px 35px rgb(0 0 0 / 21%);
+    display: flex;
+    flex-direction: column;
+    background: white;
+    z-index: 100;
+    height: 764px;
+    margin: -34px 0 0 -16px;
 }
 
-.red {
-    color: #F16D7F;
+.filter__left__box__list__menu {
+    margin: 54px 0 8px 17px;
 }
+
+.filter__left__box__list__menu-text {
+    border-left: 5px solid #EF5B70;
+    padding: 10px;
+}
+
+.filter__left__box__list__menu__p-item {
+    padding: 11px 0 0 17px;
+}
+
+.accesories {
+    padding-top: 25px;
+}
+
+.filter__left__box__list__menu__p-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-decoration: none;
+}
+
+.filter__left__box__list__menu__brand {
+    margin: 8px 0 8px 17px;
+}
+
+.filter__left__box__list__menu__disigner {
+    margin: 8px 0 8px 17px;    
+}
+
+.trending {
+    cursor: pointer;
+    margin-right: 160px;
+}
+
+.size {
+    cursor: pointer;
+}
+
+.filter__left__color-list-link {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6F6E6E;
+    padding: 3px 19px 3px 19px;
+}
+
+.filter__left__color-list {
+    box-shadow: 6px 4px 35px rgb(0 0 0 / 21%);
+    background: white;
+}
+
+.filter__left__color {
+    cursor: pointer;
+    position: absolute;
+    margin-left: 15px;
+}
+
+.price {
+    margin-left: 84px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 .card {
     display: flex;
@@ -159,79 +263,6 @@ li {
     flex-wrap: wrap;
 }
 
-.card__info {
-    width: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow:0 0 0 140px rgba(33, 22, 22, 0.7) inset;
-}
-
-.women {
-    background: url('img/forwomen.png');
-    background-repeat: no-repeat;
-}
-
-.men {
-    background: url('img/forman.png');
-    background-repeat: no-repeat;
-}
-
-.kids {
-    background: url('img/forkids.png');
-    background-repeat: no-repeat;
-}
-
-.accesories {
-    background: url('img/accesories.png');
-    background-repeat: no-repeat;
-    height: 180px;
-}
-.card__info:not(:last-child) {
-    max-width: 360px;
-    margin: 0 0 30px 0;
-    height: 260px;
-}
-
-.card_txt {
-    max-width: 170px;
-    font-size: 16px;
-    line-height: 28px;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-.card_txt_eff {
-    color: #F16D7F;
-    font-size: 24px;
-}
-
-.bottom__card {
-    margin: auto;
-    margin-top: 96px;
-    
-}
-.H3_text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 48px;
-}
-
-.text__h2 {
-    font-size: 30px;
-    line-height: 36px;
-    color: #222222;
-}
-
-.text__h4 {
-    font-size: 14px;
-    line-height: 17px;
-    color: #9F9F9F;
-}
-
 .bot__card {
     display: flex;
     justify-content: space-between;
@@ -241,22 +272,12 @@ li {
 .item__card {
     background: #F8F8F8;
     max-Width: 360px;
-    max-Height: 581px;
     margin-bottom: 30px;
 }
 
 .item__info {
     margin-bottom: 25px;
     height: 420px;
-}
-
-.pic {
-    background: url('img/Rectangle_1.png') no-repeat;
-    position: relative;
-}
-
-.shadow:hover {
-    box-shadow: 0 0 0 170px rgba(58, 56, 56, 0.86) inset;  
 }
 
 .item__box {
@@ -284,42 +305,47 @@ li {
     color: #F16D7F;
 }
 
-.bottom_button {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 19px;
-    margin-bottom: 95px;
+ul.pagination_page {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
-.button__product {
-    display: flex;
-    margin: auto;
-    
-}
+ul.pagination_page li {display: inline;}
 
-.but__prod {
-    display: flex;
-    justify-items: center;
-    border: 1px solid #F16D7F;
-    padding: 15px 39px;
+ul.pagination_page li  {
+    color: black;
+    float: left;
+    padding: 8px 8px;
     text-decoration: none;
-    font-size: 16px;
-    line-height: 19px;
-    color: #F16D7F;
 }
 
-.but__prod:hover {
-    background: #F16D7F;
-    color: #FFFFFF;
+.pagination {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+
+.num {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 11px;
+    color: rgb(165, 164, 164);
+}
+
+.num_active {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 11px;
+    color: #EF5B70;
+}
+
+.pagination {
+    margin: 60px auto 110px auto;
 }
 
 .footer {
     background: #222224;
-
-    &__bottom {
-        
-    }
 }
 
 .footer_aboutus {
@@ -340,7 +366,7 @@ li {
 }
 
 .about__zag {
-    margin: auto;box-shadow: 0 0 0 200px rgba(244, 244, 244, 0.7) inset;
+    margin: auto;
     padding: 24px 0 16px 0
 }
 
@@ -366,7 +392,7 @@ li {
 }
 
 .fon {
-    
+    box-shadow: 0 0 0 200px rgba(244, 244, 244, 0.7) inset;
 }
 
 .subscribe__footer {
