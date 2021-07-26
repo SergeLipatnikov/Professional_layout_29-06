@@ -46,42 +46,6 @@
   color: #F16D7F;
   padding: 60px 10px 60px 10px;
   margin: auto;
-  cursor: pointer;
-}
-
-.main__named:hover {
-  -webkit-animation: 0.1s tremor ease-out infinite;
-          animation: 0.1s tremor ease-out infinite;
-}
-
-@-webkit-keyframes tremor {
-  0%, 25% {
-    left: -0.1px;
-    top: -0.1px;
-    -webkit-transform: translateX(-0.1%);
-            transform: translateX(-0.1%);
-  }
-  50%, 100% {
-    left: 0.1px;
-    top: 0.1px;
-    -webkit-transform: translateX(0.1%);
-            transform: translateX(0.1%);
-  }
-}
-
-@keyframes tremor {
-  0%, 25% {
-    left: -0.1px;
-    top: -0.1px;
-    -webkit-transform: translateX(-0.1%);
-            transform: translateX(-0.1%);
-  }
-  50%, 100% {
-    left: 0.1px;
-    top: 0.1px;
-    -webkit-transform: translateX(0.1%);
-            transform: translateX(0.1%);
-  }
 }
 
 .registration {
@@ -182,6 +146,7 @@
   color: #FFFFFF;
   background: #F16D7F;
   padding: 17px 66px 17px 29px;
+  border: none;
 }
 
 .registration__reg__right--text {
