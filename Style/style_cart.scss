@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+details > summary {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 .container {
     max-width: 1160px;
     padding: 0 10px;
@@ -17,6 +25,7 @@
         justify-content: space-between;
         padding: 19px 10px;
         margin: 0 auto;
+        align-items: center;
     }
 
     &__left {
@@ -25,12 +34,83 @@
                 padding-right: 41px;
             }
         }
+
+        &__color {
+            &--text {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #F16D7F;
+            }
+        }
     }
 
     &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         &__icon {
+            display: flex;
+            align-items: center;
+
             &:not(:last-child) {
                 padding-right: 33px;
+            }
+        }
+
+        &__filter {
+            cursor: pointer;
+
+            &__men {
+                padding: 24px 0 0 33px;
+                cursor: pointer;
+            }
+
+            &__women {
+                padding: 20px 0 0 33px;
+                cursor: pointer;
+            }
+
+            &__kids {
+                padding: 20px 0 157px 33px;
+                cursor: pointer;
+            }
+
+            &__list {
+                position: absolute;
+                width: 161px;
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.28);
+                display: flex;
+                flex-direction: column;
+                margin: 27px 0 0 161px;
+                background: white;
+                z-index: 100;
+                height: 764px;
+
+                &__item {
+                    padding: 37px 0 0 34px
+                }
+
+                &__link {
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    text-decoration: none;
+                }
+
+                &--item {
+                    padding: 12px 0 0 21px
+                }                
+            }
+
+            &__menu {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+                text-decoration: none ;
             }
         }
     }
@@ -42,14 +122,14 @@
         background-color: #F8F3F4;
         margin: auto;
         
-            &--text {
-                font-weight: normal;
-                font-size: 24px;
-                line-height: 29px;
-                color: #F16D7F;
-                padding: 60px 10px 60px 10px;
-                margin: auto;
-            }
+        &--text {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #F16D7F;
+            padding: 60px 10px 60px 10px;
+            margin: auto;
+        }
     }
 
     &__cards {
@@ -101,6 +181,13 @@
             }
         }
 
+        &__price {
+            &--eff {
+                color: #F16D7F;
+                padding-left: 5px;
+            }
+        }
+
         &__quantity {
             display: flex;
             padding-top: 6px;
@@ -148,6 +235,11 @@
             font-size: 14px;
             line-height: 17px;
             color: #000000;
+
+            &:hover {
+                background: #F16D7F;
+                color: #FFFFFF;
+            }
         }
     }
 }
@@ -183,6 +275,12 @@
         margin-top: 24px;
         font-size: 11px;
         color: #4A4A4A;
+        border: 1px solid #A4A4A4;
+
+        &:hover {
+            background: #F16D7F;
+            color: #FFFFFF;
+        }
     }
 }
 
@@ -230,8 +328,13 @@
 
         &--eff{
             padding: 16px 42px;
+            border: 1px solid #A4A4A4;
+            color: #4A4A4A;
+
+            &:hover {
             background: #F16D7F;
             color: #FFFFFF;
+            }
         }
     }
 }
@@ -247,8 +350,6 @@
 .footer {
     background: url('img/Layer.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
     margin-top: 129px;
 
     &__bottom {
@@ -257,7 +358,7 @@
 }
 
 .fon {
-    box-shadow: 0 0 0 200px rgba(244, 244, 244, 0.7) inset;
+    box-shadow: 0 0 0 250px rgba(244, 244, 244, 0.7) inset;
 }
 
 form {
@@ -370,4 +471,221 @@ form {
             }
         }
     }    
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header {
+        &__area {
+        padding: 19px 16px;
+        }
+
+        &__right {
+            &__filter {
+                &__list {
+                    margin: 27px 0 0 5px;
+                    height: 640px;
+                }
+            }
+        }
+    }
+
+    .main {
+        &__named {
+            &--text {
+                padding: 60px 10px 60px 10px;
+            }
+        }
+
+        &__cards {
+            flex-direction: column;
+        }
+    }
+
+    .cards {
+        margin-top: 60px;
+    }
+
+    .check {
+        display: flex;
+    }
+
+    .checkout {
+        margin-left: 15px;
+        margin-top: 38px;
+    }
+
+    .cloud {
+        display: flex;
+        flex-direction: column;
+
+        &__text {
+            justify-content: center;
+            display: flex;
+        }
+    }
+
+    .subscribe {
+        &__cloud {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        &__text {
+            max-width: unset;
+        }
+
+        &__btn {
+            padding-bottom: 50px;
+        }
+    }
+
+    .footer {
+        margin-top: 80px;
+    }
+}
+ 
+@media (max-width: 667px) {
+    .header {
+        &__right {
+            &__icon {
+                &:nth-child(3) {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        &__right {
+            &__filter {
+                &__list {
+                    margin: 27px 0 0 -89px;
+                }
+            }
+        }
+    }
+
+    .main {
+        &__named {
+            &--text {
+                text-align: center;
+            }
+        }
+    }
+    .cards {
+        &__card {
+            width: 358px;
+
+            &__photo {
+                &--eff{
+                    width: 143px;
+                }
+            }
+
+            &__text {
+                width: 160px;
+                height: 154px;
+                padding: 13px 0 0 17px;
+            }
+
+            &__zag {
+                font-size: 15px;
+                line-height: 19px;
+            }
+
+            &__add {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            &__quantity {
+                &--text {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                &--output {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+
+            &__exit {
+                height: 153px;
+                padding: 14px 10px 0 0;
+
+                &--img {
+                    block-size: 7%;
+                }
+            }
+        }
+
+        &__button {
+            margin-top: 30px;
+
+            &__left {
+                margin-right: 10px;
+            }
+
+            &__text {
+                font-size: 12px;
+                line-height: 14px;
+                padding: 8px 17px;
+            }
+        }
+    }
+
+    .price {
+        padding-top: 25px;
+    }
+
+    .check {
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    .checkout {
+        margin-top: 50px;
+        width: 330px;
+
+        &__button {
+            margin-left: 34px;
+
+            &--eff {
+                padding: 16px 59px;
+            }
+        }
+    }
+
+    .hr {
+        width: 290px;
+    }
+
+    .subscribe {
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &.social {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &__text {
+            text-align: center;
+        }
+
+        &__item {
+            text-align: center;
+        }
+    }
 }
