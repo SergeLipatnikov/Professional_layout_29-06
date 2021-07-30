@@ -161,6 +161,7 @@ li {
 .filter__left__box {
     cursor: pointer;
     position: absolute;
+    z-index: 100;
 }
 
 details [open] > summary {
@@ -238,6 +239,7 @@ details [open] > summary {
     cursor: pointer;
     position: absolute;
     margin-left: 15px;
+    z-index: 100;
 }
 
 .price {
@@ -245,22 +247,8 @@ details [open] > summary {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
 .card {
-    display: flex;
-    justify-content: space-between;
     margin: auto;
-    flex-wrap: wrap;
-}
-
-.card:not(:last-child) {
-    flex-wrap: wrap;
 }
 
 .bot__card {
@@ -271,23 +259,62 @@ details [open] > summary {
 
 .item__card {
     background: #F8F8F8;
-    max-Width: 360px;
-    margin-bottom: 30px;
+    width: 360px;
+    margin-bottom: 15px;
 }
 
-.item__info {
-    margin-bottom: 25px;
-    height: 420px;
+.card__img {
+    width: 100%;
+    display: block;
+}
+
+.card__img__block {
+    position: relative;
+}
+
+.item__img__btn {
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.item__card:hover .item__img__btn {
+    opacity: 1;
+}
+
+.card__add {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+}
+
+.card__add:hover {
+    background-color: #F16D7F;
+    color: white;
 }
 
 .item__box {
     padding-left: 18px;
+    margin-top: 25px;
 }
 
 .zag__text {
+    font-style: normal;
+    font-weight: bold;
     font-size: 13px;
     line-height: 16px;
-    margin-bottom: 12px;
+    color: #000000;
+    text-decoration: none;
 }
 
 .text__card {
@@ -297,6 +324,10 @@ details [open] > summary {
     color: #5D5D5D;
     max-width: 314px;
     padding-bottom: 18px;
+}
+
+.item__price {
+    padding-bottom: 20px;
 }
 
 .price__text {
@@ -392,14 +423,12 @@ ul.pagination_page li  {
 }
 
 .fon {
-    box-shadow: 0 0 0 200px rgba(244, 244, 244, 0.7) inset;
+    box-shadow: 0 0 0 250px rgba(244, 244, 244, 0.7) inset;
 }
 
 .subscribe__footer {
     background: url('img/Layer.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
 }
 
 .cloud {
@@ -523,4 +552,127 @@ form {
 .item__icon__click:hover > .item__icon__click1 {
     background: #F16D7F;
     fill: white;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header__box {
+        padding: 19px 16px;
+    }
+
+    .header__right__filter {
+        z-index: 101;
+    }
+
+    .header__right__filter-list {
+        margin: 27px 0 0 0px;
+    }
+
+    .nav {
+        padding: 60px 16px 60px 16px;
+    }
+
+    .filters {
+        justify-content: space-between;
+    }
+
+    .filter__right {
+        margin: unset;
+    }
+
+    .item__card:last-child {
+        display: none;
+    }
+    
+    .footer_aboutus {
+        flex-direction: column;
+    }
+
+    .footer__box {
+        margin: 20px 0;
+    }
+
+    .subscribe__footer {
+        background-size: none;
+        background-position: none;
+    }
+
+    .cloud {
+        flex-direction: column;
+    }
+
+    .cloud__about {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .cloud__text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .subscribe__cloud {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .but_email {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 667px) {
+    .header__right__filter {
+        margin-right: 0;
+    }
+
+    .right__icon {
+        display: none;
+    }
+
+    .header__right__filter {
+        z-index: 101;
+    }
+
+    .header__right__filter-list {
+        margin: 27px 0px 0 -115px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px 16px 60px 16px;
+    }
+
+    .name__nav {
+        text-align: center;
+        padding-bottom: 32px;
+    }
+
+    .name__history {
+        justify-content: center;
+    }
+
+    .filters {
+        margin: 10px auto 40px auto;
+    }
+
+    .filter__left__box__legend {
+        white-space: nowrap;
+        overflow: hidden;
+        text-indent: -77%;
+        position: absolute;
+    }
+
+    .filter__left__box__list {
+        margin: -10px 0 0 -16px;
+    }
 }

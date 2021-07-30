@@ -16,17 +16,85 @@
         justify-content: space-between
         padding: 19px 10px
         margin: 0 auto
+        align-items: center
     
     &__left
         &__icon
             &:not(:last-child)
                 padding-right: 41px
+
+        &__color
+            &--text
+                font-weight: normal
+                font-size: 14px
+                line-height: 17px
+                color: #F16D7F
     
     &__right
+        display: flex
+        justify-content: space-between
+        align-items: center
+
         &__icon
+            display: flex
+            align-items: center
+
             &:not(:last-child) 
                 padding-right: 33px
+
+        &__filter
+            cursor: pointer
+
+            &__men
+                padding: 24px 0 0 33px
+                cursor: pointer
+
+            &__women
+                padding: 20px 0 0 33px
+                cursor: pointer
+
+            &__kids
+                padding: 20px 0 157px 33px
+                cursor: pointer
+
+            &__list
+                position: absolute
+                width: 161px
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.28)
+                display: flex
+                flex-direction: column
+                margin: 27px 0 0 161px
+                background: white
+                z-index: 100
+                height: 764px
+
+                &__item
+                    padding: 37px 0 0 34px
+
+                &__link
+                    font-weight: bold
+                    font-size: 14px
+                    line-height: 17px
+                    color: #000000
+                    text-decoration: none
+                
+                &--item
+                    padding: 12px 0 0 21px
+
+            &__menu
+                font-weight: normal
+                font-size: 14px
+                line-height: 17px
+                color: #6F6E6E
+                text-decoration: none 
+
+details > summary 
+    list-style: none
+
+li
+    list-style-type: none
     
+
 .main
     &__named
         width: 100%
@@ -142,15 +210,13 @@ ul li
 .footer 
     background: url('img/Layer.jpg')
     background-repeat: no-repeat
-    background-size: 100%
-    background-position: center
     margin-top: 129px
 
     &__bottom 
         background: #222224
     
 .fon
-    box-shadow: 0 0 0 200px rgba(244, 244, 244, 0.7) inset
+    box-shadow: 0 0 0 250px rgba(244, 244, 244, 0.7) inset
 
 form
     display: flex
@@ -254,3 +320,92 @@ form
                     background: #F16D7F
                     fill: white
 
+@media (max-width: 1024px)
+    .container
+        padding: 0 16px
+    .header
+        &__area
+            padding: 19px 16px
+        
+        &__right
+            &__filter
+                &__list
+                    margin: 27px 0 0 10px
+                    height: 640px
+
+    .main
+        &__named
+            &--text
+                padding: 60px 16px 60px 16px
+
+    .registration
+        &__reg
+            &__left
+                width: 360px
+            
+            &__right
+                margin-left: 22px
+                width: 354px
+
+                &--text
+                    font-size: 16px
+                    line-height: 19px
+                    max-width: 340px
+    
+    .cloud
+        flex-direction: column
+        padding: 25px 0 60px 0
+
+        &__text
+            display: flex
+            justify-content: center
+
+    .subscribe
+        &__cloud
+            display: flex
+            justify-content: center
+            flex-direction: column
+            margin: auto
+
+@media (max-width: 667px)
+    .header
+        &__right
+            &__icon
+                &:nth-child(3)
+                    display: none
+                
+                &:nth-child(2)
+                    display: none
+
+            &__filter
+                &__list
+                    margin: 27px 0 0 -89px
+
+    .main
+        &__named
+            text-align: center
+
+    .registration
+        margin-top: 40px
+
+        &__reg
+            flex-direction: column
+
+            &__left
+                width: 345px
+
+            &__right
+                width: 359px
+                margin-left: unset
+                margin-top: 40px
+
+    .social
+        display: flex
+        justify-content: center
+        flex-direction: column-reverse
+
+        &__text
+            text-align: center
+        
+        &__item
+            text-align: center
